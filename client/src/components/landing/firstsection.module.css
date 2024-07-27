@@ -1,0 +1,21 @@
+.headingdiv {
+    display: inline-flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    
+}
+
+.heading {
+    color: #101A24;
+    font-family: "David Libre";
+    font-size: 70px;
+    max-width: 40rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 72px;
+    /* 102.857% */
+}

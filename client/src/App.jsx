@@ -1,17 +1,17 @@
-import { useState } from 'react'
+// import { FaMountainSun } from "react-icons/fa6";
+import { BrowserRouter as Router } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 
-import './App.css'
+import AllRoutes from "./AllRoutes";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <h1 className="text-3xl bg-pink-700 font-bold underline">
-        Hello world!
-      </h1>
+      <Router>
+        <AllRoutes />
+      </Router>
     </>
   )
 }
 
-export default App
+export default App;

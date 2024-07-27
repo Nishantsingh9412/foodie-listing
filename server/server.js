@@ -1,10 +1,11 @@
-// import './config.js'
+
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
-// import session from "express-session";
-// import passport from "./passport.js";
+
+import authRoutes from './routes/auth.js'
+import otpRoutes from './routes/otpRoutes.js'
 
 dotenv.config();
 
@@ -16,6 +17,9 @@ const corsOptions = {
     credentials: true,
 };
 app.use(cors(corsOptions));
+
+app.use('/auth',authRoutes)
+app.use('/otp',otpRoutes)
 
 
 app.get("/", (req, res) => {
