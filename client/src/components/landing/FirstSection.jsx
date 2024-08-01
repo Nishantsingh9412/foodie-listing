@@ -5,6 +5,7 @@ import CSS from './firstsection.module.css'
 
 
 const FirstSection = () => {
+        
     return (
         <div className='flex flex-col md:flex-row h-screen m-28  '>
             {/* Section first */}

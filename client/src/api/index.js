@@ -23,3 +23,14 @@ export const sendOTPAPI = (email) => API.post('/otp/send-otp', email)
 // export const loginSignUpGoogleAPI = () => API.get('/auth/google/callback')
 
 // export const validateOTPAPI = (validateOTPData) => API.post('/otp/validate-otp', validateOTPData)
+
+// Weblist API's 
+export const setWebListAPI = (newWebList) => API.post('/weblist/set-weblist', newWebList)
+
+export const getWebListAPI = () => API.get('/weblist/get-weblist')
+
+export const UpdateWebListAPI = (id, updatedWebList) => API.patch(`/weblist/update-weblist/${id}`, updatedWebList)
+
+export const getWebListCreatedBy = (createdBy) => API.get(`/weblist/get-weblist/${createdBy}`)
+
+export const deleteWebListAPI = (id) => API.delete(`/weblist/delete-weblist/${id}`)

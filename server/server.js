@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 
 import authRoutes from './routes/auth.js'
 import otpRoutes from './routes/otpRoutes.js'
+import weblistRoutes from './routes/weblistRoutes.js'
 
 dotenv.config();
 
@@ -20,6 +21,7 @@ app.use(cors(corsOptions));
 
 app.use('/auth',authRoutes)
 app.use('/otp',otpRoutes)
+app.use('/weblist',weblistRoutes)
 
 
 app.get("/", (req, res) => {

@@ -1,12 +1,12 @@
 const initialState = {
-    data: null
+    data: {}
 }
 
 const authReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'AUTH':
             localStorage.setItem('Profile', JSON.stringify({ ...action?.data }))
-            console.log('Hello from auth Reducer : ',action?.data)
+            console.log('Hello from auth Reducer : ', action?.data)
             return { ...state, data: action?.data }
         case 'LOGOUT':
             localStorage.clear();
