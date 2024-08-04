@@ -32,11 +32,28 @@ const Website = ({ website, onDelete, localUserId }) => {
     }
 
     const handleDelete = (id) => {
-        console.log(16, "id  :", id)
-        if (window.confirm("Are you sure you want to delete this Listed Website?")) {
-            handleConfirmDelete(id)
-        }
-    }
+        console.log(16, "id  :", id);
+        toast((t) => (
+            <span>
+                Are you sure you want to delete this Listed Website?
+                <button
+                    onClick={() => {
+                        handleConfirmDelete(id);
+                        toast.dismiss(t.id);
+                    }}
+                    className="ml-2 px-3 py-1 bg-red-600 text-white rounded"
+                >
+                    Yes
+                </button>
+                <button
+                    onClick={() => toast.dismiss(t.id)}
+                    className="ml-2 px-3 py-1 bg-gray-600 text-white rounded"
+                >
+                    No
+                </button>
+            </span>
+        ));
+    };  
 
     const handleEdit = (website) => {
     }

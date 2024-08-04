@@ -51,7 +51,7 @@ const SignIn = () => {
 
         dispatch(loginAction(loginData)).then((res) => {
             if (res.success) {
-                navigate('/profile');
+                navigate('/dashboard');
             } else {
                 toast.error(res?.message);
             }

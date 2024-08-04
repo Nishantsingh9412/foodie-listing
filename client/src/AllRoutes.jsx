@@ -29,7 +29,7 @@ const AllRoutes = () => {
       <Route path="/dashboard/profile" element={<Profile />} />
 
       {/* Under Development */}
-      <Route path="/profile" element={<ProfilePage />} />
+      {/* <Route path="/profile" element={<ProfilePage />} /> */}
       <Route path="*" element={<NotFound />} />
 
     </Routes>
